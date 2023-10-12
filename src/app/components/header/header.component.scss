@@ -1,0 +1,44 @@
+#title{
+  color: white;
+  -webkit-text-stroke:4px #fff;
+}
+
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+}
+@keyframes blinking {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.blinking {
+    width: 22ch;
+    border-right: 4px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 47px;
+    font-weight: 300;
+    color: white;
+    animation: typing 2s steps(14), blinking 0.5s infinite step-end alternate;
+}
+
+.principal-image{
+    margin-left: -100px;
+    right: -60px;
+}
+.btn{
+  padding: 10px 25px;
+  border-radius: 100px;
+}
+.btn-white{
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+.btn-red{
+  border: 2.4px solid #fff;
+  color: white;
+}
