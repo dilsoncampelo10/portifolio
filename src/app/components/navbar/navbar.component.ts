@@ -10,12 +10,6 @@ export class NavbarComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-
-    if (window.scrollY > 10) {
-      this.isScrolled = true;
-
-    } else{
-      this.isScrolled = false;
-    }
+    this.isScrolled = window.scrollY > 10?true:false;
   }
 }
