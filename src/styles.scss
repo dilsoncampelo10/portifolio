@@ -5,3 +5,16 @@ body{
 
   font-family: 'Roboto', sans-serif;
 }
+
+.btn{
+  padding: 10px 25px;
+  border-radius: 100px;
+}
+.btn-white, .btn-white:hover,.btn-red:hover{
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+.btn-red{
+  border: 2.4px solid #fff;
+  color: white;
+}

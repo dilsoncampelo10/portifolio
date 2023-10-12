@@ -1,0 +1,17 @@
+.navbar{
+  opacity: 0;
+  transition: 0.3s all ease-in;
+}
+.navShow{
+  opacity: 1;
+  transition: 0.3s all ease !important;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+.nav-link{
+  padding: 25px 10px;
+  font-weight: 500;
+  outline: none;
+}
