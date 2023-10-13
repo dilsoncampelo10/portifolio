@@ -1,0 +1,25 @@
+<section class="container-fluid py-5" id="experience">
+  <div class="container">
+      <div class="position-relative d-flex align-items-center justify-content-center">
+          <h1 class="display-1 text-uppercase text-white title-section">Experiência</h1>
+          <h1 class="position-absolute text-uppercase text-danger">Experiência</h1>
+      </div>
+      <div class="row align-items-center">
+          <div class="col-lg-4">
+              <h3 class="mb-4">Educação e Experiência</h3>
+              <div class="border-start border-danger pt-2 ps-4 ms-2">
+                  <div class="position-relative ex-me mb-4" *ngFor="let experience of experiences">
+                      <i class="far fa-dot-circle text-danger position-absolute exp-circle"></i>
+                      <h5 class="fw-bold mb-1">{{experience.title}}</h5>
+                      <p class="mb-2">{{experience.locale}}</p>
+                      <p><small>{{experience.date}}</small></p>
+                      <p>
+                          {{experience.description}}
+                      </p>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
