@@ -12,6 +12,7 @@ import { ServiceComponent } from './components/service/service.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ModalComponent } from './components/utils/modal/modal.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ContactComponent } from './components/contact/contact.component';
     ServiceComponent,
     ProjectsComponent,
     ModalComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
