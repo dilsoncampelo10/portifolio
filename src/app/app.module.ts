@@ -11,6 +11,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ServiceComponent } from './components/service/service.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ModalComponent } from './components/utils/modal/modal.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ModalComponent } from './components/utils/modal/modal.component';
     ExperienceComponent,
     ServiceComponent,
     ProjectsComponent,
-    ModalComponent
+    ModalComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule
