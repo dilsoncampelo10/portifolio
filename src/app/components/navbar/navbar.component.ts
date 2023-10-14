@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { IMenuItem } from 'src/app/interfaces/IMenuItem';
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +9,35 @@ import { Component, HostListener } from '@angular/core';
 export class NavbarComponent {
   isScrolled = false;
 
+  menuItems: IMenuItem[] = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'Sobre' },
+    { id: 'experience', label: 'Experiência' },
+    { id: 'skill', label: 'Habilidades' },
+    { id: 'service', label: 'Serviços' },
+    { id: 'project', label: 'Projetos' }
+  ];
+
+  activeMenuItem: string | null = null;
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isScrolled = window.scrollY > 10?true:false;
+    this.isScrolled = window.scrollY > 10 ? true : false;
+    this.onScroll();
+  }
+
+  onScroll(): void {
+    const scrollPosition = window.scrollY;
+    for (const item of this.menuItems) {
+      const element = document.getElementById(item.id);
+      if (element) {
+        const offsetTop = element.offsetTop;
+        const offsetBottom = offsetTop + element.offsetHeight;
+        if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+          this.activeMenuItem = item.id;
+          break;
+        }
+      }
+    }
   }
 }
