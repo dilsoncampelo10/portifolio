@@ -7,10 +7,10 @@
       <div class="d-flex justify-content-center flex-wrap pb-3">
           <div class="service-area col-lg-4 col-md-6  text-center mb-5" *ngFor="let service of services">
               <div class="d-flex align-items-center justify-content-center mb-4">
-                  <i class="fa fa-2x fa-laptop service-icon bg-danger text-white"></i>
+                  <i class="{{service.icon}} service-icon bg-danger text-white"></i>
               </div>
-              <h4 class="fw-bold m-0 ms-3 title-service">Desenvolvedor de Sistemas</h4>
-                  <p>Desenvolvimento de aplicações web utilizando banco de dados, geralmente utilizando Laravel ou Spring </p>
+              <h4 class="fw-bold m-0 ms-3 title-service">{{service.title}}</h4>
+                  <p>{{service.description}}</p>
           </div>
       </div>
   </div>
