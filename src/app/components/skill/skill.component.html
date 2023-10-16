@@ -4,7 +4,7 @@
             <h1 class="display-1 text-uppercase text-white title-section">Habilidades</h1>
             <h1 class="position-absolute text-uppercase text-danger">Habilidades</h1>
         </div>
-        <div class="row align-items-center">
+        <div class="row align-items-center" *ngIf="activeTab=='principal'">
             <div class="col-md-4">
               <h4 class="text-primary mb-5">Back-End</h4>
               <div class="skill mb-4" *ngFor="let skill of backendSkills">
@@ -55,13 +55,53 @@
             </div>
 
         </div>
+        <div *ngIf="activeTab=='all'" class="row justify-content-center">
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="icon-skill" alt="PHP"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain-wordmark.svg" class="icon-skill" alt="Laravel"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" class="icon-skill" alt="Java"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg"  class="icon-skill" alt="Spring"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" class="icon-skill" alt="MySQL"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" class="icon-skill" alt="MongoDB"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="icon-skill" alt="Linux"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="icon-skill" alt="AWS"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" class="icon-skill" alt="Docker"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="icon-skill" alt="TypeScript"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="icon-skill" alt="JavaScript"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" class="icon-skill" alt="Angular"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg" class="icon-skill" alt="Next"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" class="icon-skill" alt="React"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original-wordmark.svg" class="icon-skill" alt="JQuery"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" class="icon-skill" alt="HTML"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"  class="icon-skill" alt="CSS"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" class="icon-skill" alt="Bootstrap"/>
+
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" class="icon-skill" alt="GIT"/>
+
+        </div>
         <div class="row">
           <div class="col-12 text-center mt-5">
               <ul class="list-inline mb-4" id="">
-                  <li class="btn btn-sm btn-outline-danger mx-1 active" data-filter=".principal">Principais</li>
-                  <li class="btn btn-sm btn-outline-danger mx-1" data-filter=".back">BackEnd</li>
-                  <li class="btn btn-sm btn-outline-danger mx-1" data-filter=".front">FrontEnd</li>
-                  <li class="btn btn-sm btn-outline-danger mx-1 " data-="*">Todos</li>
+                  <li (click)="onTabClick('principal')" class="btn btn-sm btn-outline-danger mx-1" [class.active]="activeTab=='principal'">Principais</li>
+
+                  <li (click)="onTabClick('all')" class="btn btn-sm btn-outline-danger mx-1"[class.active]="activeTab=='all'">Todos</li>
               </ul>
           </div>
       </div>
