@@ -7,4 +7,12 @@
   background-image: url('../../../assets/images/circuits.png');
   background-repeat: no-repeat;
   background-position: right center;
+  background-size: 1100px;
+}
+
+@media(max-width:640px){
+    #experience{
+      background-position: center center;
+      background-size: 500px;
+    }
 }
