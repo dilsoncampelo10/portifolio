@@ -27,6 +27,12 @@
 }
 
 .principal-image{
-    margin-left: -100px;
-    right: -60px;
+
+}
+
+@media(max-width:640px){
+  .blinking{
+    font-size: 20px;
+    margin: auto;
+  }
 }

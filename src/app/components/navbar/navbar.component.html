@@ -4,22 +4,29 @@
           <span class="text-danger"><i class="fa-solid fa-not-equal"></i> Dil</span>son
       </h1>
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="collapseNavbar">
       <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse" style="flex: 1;">
-      <div class="navbar-nav m-auto py-0">
-          <!-- <a href="#home" class="nav-item nav-link" [class.active]="isContactSectionActive">Home</a>
-          <a href="#about" class="nav-item nav-link ">Sobre</a>
-          <a href="#experience" class="nav-item nav-link ">Experiência</a>
-          <a href="#skill" class="nav-item nav-link ">Habilidades</a>
-          <a href="#service" class="nav-item nav-link ">Serviços</a>
-          <a href="#project" class="nav-item nav-link ">Projetos</a> -->
-          <a *ngFor="let item of menuItems" [class.active]="item.id === activeMenuItem"
-     class="nav-item nav-link" [href]="'#' + item.id">{{ item.label }}</a>
+
+  <div class="offcanvas offcanvas-end px-lg-3"  tabindex="-1" id="offcanvasNavbar"  style="flex: 1;">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dilson</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+      <div class="offcanvas-body align-items-center">
+        <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <a *ngFor="let item of menuItems" [class.active]="item.id === activeMenuItem"
+             class="nav-item nav-link" [href]="'#' + item.id">{{ item.label }}</a>
+        </div>
+        <a href="#contact" class="btn btn-menu d-none d-lg-block" style="background-color: #dc3545; color: #fff;">
+          <i class="fa-solid fa-envelope"></i> Contato
+        </a>
       </div>
-      <a href="#contact" class="btn btn-menu d-none d-lg-block" style="background-color: #dc3545; color: #fff;">
-        <i class="fa-solid fa-envelope"></i> Contato
-      </a>
   </div>
+  <a href="#home">
+    <div class="btn btn-dark up-button">
+      <i class="fa-solid fa-circle-up"></i>
+    </div>
+  </a>
 </nav>
