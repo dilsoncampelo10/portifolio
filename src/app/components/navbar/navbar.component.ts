@@ -27,12 +27,14 @@ export class NavbarComponent {
   }
 
   onScroll(): void {
-    const scrollPosition = window.scrollY;
+    const scrollPosition = window.scrollY +5;
+
     for (const item of this.menuItems) {
       const element = document.getElementById(item.id);
       if (element) {
         const offsetTop = element.offsetTop;
         const offsetBottom = offsetTop + element.offsetHeight;
+
         if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
           this.activeMenuItem = item.id;
           break;
@@ -40,4 +42,5 @@ export class NavbarComponent {
       }
     }
   }
+
 }
