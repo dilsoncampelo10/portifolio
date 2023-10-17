@@ -8,13 +8,16 @@
       <div class="row project-area">
           <div class="col-lg-4 col-md-6 mb-4 project" *ngFor="let project of projects">
               <div class="position-relative overflow-hidden mb-2">
-                  <img class="img-fluid rounded w-100" src="https://images.musement.com/cover/0001/100/predator-v5-jpg_header-99107.jpeg" alt="d">
+                  <img class="img-fluid rounded w-100" src="assets/images/projects/{{project.image}}" alt="{{project.title}}">
                   <div class="d-flex align-items-center justify-content-between">
                     <div class="project-button bg-danger d-flex align-items-center justify-content-center">
                         <a href="#" data-bs-toggle="modal" data-bs-target="#imagem" class="btn-more">
-                            <i class="fa fa-plus text-white" style="font-size: 30px;"></i>
+                            <i class="fa fa-plus text-white" style="font-size: 20px;"></i>
                         </a>
 
+                    </div>
+                    <div>
+                          <a href="" class="text-decoration-none text-dark"><strong>{{project.title}}</strong></a>
                     </div>
                     <div>
                       <i class="fa-brands fa-angular" style="color: #ec0455; font-size: 30px;"></i>
