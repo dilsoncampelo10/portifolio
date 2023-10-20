@@ -24,6 +24,7 @@ export class ContactComponent {
 
       if(status=="SENT"){
         this.emailSent = true;
+        this.emailNotSent = false;
       } else{
         this.emailSent = false;
       }
@@ -31,6 +32,7 @@ export class ContactComponent {
     },
     error =>{
       this.emailNotSent = true;
+      this.emailSent = false;
     });
 
 

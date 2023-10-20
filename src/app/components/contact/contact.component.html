@@ -7,8 +7,8 @@
       <div class="row justify-content-center ">
           <div class="col-lg-8">
                <div class="contact-form text-center">
-                  <div id="success" class="alert alert-success" [class.emailShow]="emailSent">Enviado com sucesso</div>
-                  <div id="danger" class="alert alert-danger" [class.emailShow]="emailNotSent">Erro ao enviar, preencha todos os campos</div>
+                  <div id="success" class="alert alert-success" [class.show]="emailSent">Enviado com sucesso</div>
+                  <div id="danger" class="alert alert-danger" [class.show]="emailNotSent">Erro ao enviar, preencha todos os campos</div>
                   <form method="post">
                       <div class="row">
                           <div class="control-group col-sm-6">

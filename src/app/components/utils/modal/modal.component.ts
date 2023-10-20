@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IProject } from 'src/app/interfaces/IProject';
 
 @Component({
   selector: 'app-modal',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent {
-
+  @Input() project: IProject = { image:'',title:'',description: '',link:'',icons: []};
 }
