@@ -5,10 +5,14 @@ export class Email {
 
   emailFrom: string = '';
 
-  emailTo: string = '';
+  emailTo: string = 'dilson.contato316@gmail.com';
 
   emailSubject: string = '';
 
-  emailMessagem: string = '';
+  emailMessage: string = '';
+
+  emailStatus: string = "ERROR";
+
+  emailSendDate: string = '';
 
 }

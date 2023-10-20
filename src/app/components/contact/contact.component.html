@@ -7,29 +7,30 @@
       <div class="row justify-content-center ">
           <div class="col-lg-8">
                <div class="contact-form text-center">
-                  <div id="success"></div>
-                  <form action="" method="post">
+                  <div id="success" class="alert alert-success" [class.emailShow]="emailSent">Enviado com sucesso</div>
+                  <div id="danger" class="alert alert-danger" [class.emailShow]="emailNotSent">Erro ao enviar, preencha todos os campos</div>
+                  <form method="post">
                       <div class="row">
                           <div class="control-group col-sm-6">
-                              <input type="text" class="form-control p-4" id="name" name="name" placeholder="Seu nome" required data-validation-required-message="Preencha seu nome">
+                              <input type="text" class="form-control p-4" id="emailName" name="emailName" placeholder="Seu nome" [(ngModel)]="email.emailName" required data-validation-required-message="Preencha seu nome">
                               <p class="help-block text-danger"></p>
                           </div>
 
                           <div class="control-group col-sm-6">
-                            <input type="email" class="form-control p-4" id="email" name="email" placeholder="Seu e-mail" required data-validation-required-message="Preencha seu e-mail">
+                            <input type="email" class="form-control p-4" id="emailFrom" name="emailFrom" placeholder="Seu e-mail" required data-validation-required-message="Preencha seu e-mail" [(ngModel)]="email.emailFrom">
                             <p class="help-block text-danger"></p>
                         </div>
                       </div>
                       <div class="control-group">
-                          <input type="text" class="form-control p-4" id="subject" name="subject" placeholder="Assunto" required data-validation-required-message="Preencha com assunto">
+                          <input type="text" class="form-control p-4" id="emailSubject" name="emailSubject" placeholder="Assunto" required data-validation-required-message="Preencha com assunto" [(ngModel)]="email.emailSubject">
                         <p class="help-block text-danger"></p>
                       </div>
                       <div class="control-group">
-                        <textarea class="form-control py-3 px-4" rows="5" name="message" id="message" placeholder="Mensagem" required ></textarea>
+                        <textarea class="form-control py-3 px-4" rows="5" name="message" id="message" placeholder="Mensagem" required [(ngModel)]="email.emailMessage"></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
                     <div>
-                        <button class="btn btn-outline-danger" type="submit" id="sendMessageButton">Enviar Mensagem</button>
+                        <button class="btn btn-outline-danger" type="button" id="sendMessageButton" (click)="create()">Enviar Mensagem</button>
                     </div>
                   </form>
                </div>
@@ -37,3 +38,4 @@
       </div>
   </div>
 </section>
+

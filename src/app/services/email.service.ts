@@ -13,6 +13,6 @@ export class EmailService {
   private url: string = 'https://micromail-ht69.onrender.com/emails';
 
   create(obj:Email):Observable<Email>{
-      return this.request.post<Email>(this.url,obj);
+      return this.request.post<Email>(`${this.url}/send`,obj);
   }
 }
