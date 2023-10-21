@@ -7,6 +7,11 @@
       <div class="row justify-content-center ">
           <div class="col-lg-8">
                <div class="contact-form text-center">
+                <div id="loading" [class.show]="loading">
+                    <div class="spinner-border" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
                   <div id="success" class="alert alert-success" [class.show]="emailSent">Enviado com sucesso</div>
                   <div id="danger" class="alert alert-danger" [class.show]="emailNotSent">Erro ao enviar, preencha todos os campos</div>
                   <form method="post">

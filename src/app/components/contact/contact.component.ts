@@ -10,15 +10,16 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   constructor(private emailService: EmailService){}
-
+  loading = false;
   emailSent: boolean = false;
   emailNotSent: boolean = false;
   email = new Email();
 
   create(){
-
+    this.loading = true;
     this.emailService.create(this.email)
     .subscribe(response => {
+      this.email = new Email();
       let status = "";
       status = response.emailStatus;
 
@@ -28,11 +29,12 @@ export class ContactComponent {
       } else{
         this.emailSent = false;
       }
-
+      this.loading = false;
     },
     error =>{
       this.emailNotSent = true;
       this.emailSent = false;
+      this.loading = false;
     });
 
 
