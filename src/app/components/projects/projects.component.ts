@@ -15,3 +15,4 @@ export class ProjectsComponent {
       this.selectedProjectIndex = index;
   }
 }
+
